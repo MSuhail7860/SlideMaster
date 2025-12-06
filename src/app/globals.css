@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* This line tells Tailwind v4: "Trigger dark mode when the .dark class is present" */
+@variant dark (&:where(.dark, .dark *));
+
+/* Smooth transition for background colors */
+:root {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
